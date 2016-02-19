@@ -1,0 +1,6 @@
+[varnish]
+name=Official Varnish Repository
+baseurl=https://repo.varnish-cache.org/redhat/varnish-4.1/el7/$basearch
+priority=1
+enabled=1
+gpgcheck=0
