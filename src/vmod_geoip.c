@@ -3,9 +3,8 @@
 #include <GeoIP.h>
 #include <GeoIPCity.h>
 
-#include "vcl.h"
-#include "vrt.h"
 #include "cache/cache.h"
+#include "vcl.h"
 #include "vcc_if.h"
 
 //  Are there any code elements available which I myself can
@@ -61,7 +60,7 @@ static void free_databases(void* ptr)
     free(ptr);
 }
 
-int __match_proto__(vmod_init_f)
+int v_matchproto_(vmod_init_f)
 event_function(VRT_CTX, struct vmod_priv *pp, enum vcl_event_e e)
 {
     if (e != VCL_EVENT_LOAD)
